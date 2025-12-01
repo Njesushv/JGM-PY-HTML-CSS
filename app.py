@@ -3076,6 +3076,7 @@ def editar_curso(id_curso):
         horarios=horarios
     )
 
+#RUTA MODIFICADA POR NILTON HERNANDEZ FECHA 01/12/2025
 @app.route('/eliminar_curso/<int:id_curso>', methods=['POST', 'GET'])
 def eliminar_curso(id_curso):
     try:
@@ -4812,6 +4813,7 @@ def eliminar_responsable(id_responsable):
     conexion.close()
     return redirect(url_for('responsables'))
 
+#RUTA MODIFICADA POR NILTON HERNANDEZ FECHA 01/12/2025     
 #=====================================================
 # 🔹 RUTA: Administrar matrículas (multi-sede)
 @app.route('/administrar_matriculas')
@@ -5840,7 +5842,8 @@ def agregar_matricula():
     conexion.close()
 
     return render_template('agregar_matricula.html', alumnos=alumnos, cursos=cursos)
-        
+
+#RUTA MODIFICADA POR NILTON HERNANDEZ FECHA 01/12/2025        
 @app.route('/editar_matricula/<int:id_matricula>', methods=['GET', 'POST'])
 def editar_matricula(id_matricula):
     # 🔐 Solo usuarios logueados
@@ -7081,3 +7084,4 @@ if __name__ == "__main__":
         app.run(host="0.0.0.0", port=5000, debug=True, use_reloader=True)
 
         
+
